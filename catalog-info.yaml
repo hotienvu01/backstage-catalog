@@ -1,0 +1,511 @@
+# Inventory snapshot: 2026-11-10. URLs use the temporary LAN host.
+# platform-team is the existing provisional Backstage owner.
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: k8s-platform
+  title: "Kubernetes Platform"
+  description: "System grouping the workloads inventoried on wscore on 2026-11-10. Root URL is temporary; links do not imply endpoint health."
+  tags: [kubernetes, homelab]
+  links:
+    - url: "http://192.168.1.10/"
+      title: "Temporary system entry point"
+    - url: "http://192.168.1.10:30007/"
+      title: "Backstage"
+    - url: "http://192.168.1.10:30001/"
+      title: "Rancher"
+    - url: "http://192.168.1.10:30005/"
+      title: "Jenkins"
+    - url: "http://192.168.1.10:30003/"
+      title: "Nexus"
+    - url: "http://192.168.1.10:30990/"
+      title: "APISIX gateway"
+    - url: "http://192.168.1.10:30095/"
+      title: "APISIX dashboard"
+    - url: "http://192.168.1.10:32767/"
+      title: "Customer web"
+    - url: "http://192.168.1.10:30014/"
+      title: "RabbitMQ management"
+    - url: "https://github.com/hotienvu01/docs-hub"
+      title: "Infrastructure documentation"
+spec:
+  owner: group:default/platform-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apisix-apisix
+  title: "APISIX gateway"
+  description: "Kubernetes workload apisix/apisix. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: apisix
+  links:
+    - url: "http://192.168.1.10:30990/"
+      title: "APISIX gateway"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: apisix-apisix-dashboard
+  title: "APISIX dashboard"
+  description: "Kubernetes workload apisix/apisix-dashboard. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: apisix
+  links:
+    - url: "http://192.168.1.10:30095/"
+      title: "APISIX dashboard"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-backstage
+  title: "Backstage"
+  description: "Kubernetes workload backstage/backstage. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: backstage
+  links:
+    - url: "http://192.168.1.10:30007/"
+      title: "Backstage"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-fleet-local-system-fleet-agent
+  title: "Fleet agent"
+  description: "Kubernetes workload cattle-fleet-local-system/fleet-agent. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-fleet-local-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-fleet-system-fleet-controller
+  title: "Fleet controller"
+  description: "Kubernetes workload cattle-fleet-system/fleet-controller. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-fleet-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-fleet-system-gitjob
+  title: "Fleet Git jobs"
+  description: "Kubernetes workload cattle-fleet-system/gitjob. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-fleet-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-fleet-system-helmops
+  title: "Fleet Helm operations"
+  description: "Kubernetes workload cattle-fleet-system/helmops. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-fleet-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-provisioning-capi-system-capi-controller-manager
+  title: "Cluster API controller"
+  description: "Kubernetes workload cattle-provisioning-capi-system/capi-controller-manager. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-provisioning-capi-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-system-rancher
+  title: "Rancher"
+  description: "Kubernetes workload cattle-system/rancher. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-system
+  links:
+    - url: "http://192.168.1.10:30001/"
+      title: "Rancher"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cattle-system-rancher-webhook
+  title: "Rancher webhook"
+  description: "Kubernetes workload cattle-system/rancher-webhook. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cattle-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cert-manager-cert-manager
+  title: "Certificate manager"
+  description: "Kubernetes workload cert-manager/cert-manager. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cert-manager
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cert-manager-cert-manager-cainjector
+  title: "Certificate CA injector"
+  description: "Kubernetes workload cert-manager/cert-manager-cainjector. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cert-manager
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cert-manager-cert-manager-webhook
+  title: "Certificate manager webhook"
+  description: "Kubernetes workload cert-manager/cert-manager-webhook. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: cert-manager
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: customer-service-kyosm-ec-web
+  title: "Customer web"
+  description: "Kubernetes workload customer-service/kyosm-ec-web. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: customer-service
+  links:
+    - url: "http://192.168.1.10:32767/"
+      title: "Customer web"
+spec:
+  owner: group:default/platform-team
+  type: website
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: jenkins-jenkins
+  title: "Jenkins"
+  description: "Kubernetes workload jenkins/jenkins. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: jenkins
+  links:
+    - url: "http://192.168.1.10:30005/"
+      title: "Jenkins"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: jenkins-jenkins-server
+  title: "Jenkins StatefulSet"
+  description: "Kubernetes workload jenkins/jenkins-server. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: jenkins
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kube-system-coredns
+  title: "CoreDNS"
+  description: "Kubernetes workload kube-system/coredns. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: kube-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: local-path-storage-local-path-provisioner
+  title: "Local path storage provisioner"
+  description: "Kubernetes workload local-path-storage/local-path-provisioner. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: local-path-storage
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nexus-nexus
+  title: "Nexus Repository"
+  description: "Kubernetes workload nexus/nexus. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: nexus
+  links:
+    - url: "http://192.168.1.10:30003/"
+      title: "Nexus Repository"
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kube-flannel-kube-flannel-ds
+  title: "Flannel networking"
+  description: "Kubernetes workload kube-flannel/kube-flannel-ds. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: kube-flannel
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kube-system-kube-proxy
+  title: "Kubernetes service proxy"
+  description: "Kubernetes workload kube-system/kube-proxy. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: kube-system
+spec:
+  owner: group:default/platform-team
+  type: service
+  system: system:default/k8s-platform
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: apisix-apisix-etcd
+  title: "APISIX etcd"
+  description: "Kubernetes StatefulSet apisix/apisix-etcd. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: apisix
+spec:
+  owner: group:default/platform-team
+  type: database
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: backstage-postgres
+  title: "Backstage PostgreSQL"
+  description: "Kubernetes StatefulSet backstage/postgres. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: backstage
+spec:
+  owner: group:default/platform-team
+  type: database
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: database-customer-service-db-mysql
+  title: "Customer service MySQL"
+  description: "Kubernetes StatefulSet database/customer-service-db-mysql. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: database
+spec:
+  owner: group:default/platform-team
+  type: database
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: elasticsearch-elasticsearch-data
+  title: "Elasticsearch data"
+  description: "Kubernetes StatefulSet elasticsearch/elasticsearch-data. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: elasticsearch
+spec:
+  owner: group:default/platform-team
+  type: search-engine
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: elasticsearch-elasticsearch-ingest
+  title: "Elasticsearch ingest"
+  description: "Kubernetes StatefulSet elasticsearch/elasticsearch-ingest. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: elasticsearch
+spec:
+  owner: group:default/platform-team
+  type: search-engine
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: elasticsearch-elasticsearch-master
+  title: "Elasticsearch master"
+  description: "Kubernetes StatefulSet elasticsearch/elasticsearch-master. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: elasticsearch
+spec:
+  owner: group:default/platform-team
+  type: search-engine
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: message-quebe-rabbitmq
+  title: "RabbitMQ"
+  description: "Kubernetes StatefulSet message-quebe/rabbitmq. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: message-quebe
+  links:
+    - url: "http://192.168.1.10:30014/"
+      title: "RabbitMQ management"
+spec:
+  owner: group:default/platform-team
+  type: message-broker
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-redis-master
+  title: "Redis master"
+  description: "Kubernetes StatefulSet redis/redis-master. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: redis
+spec:
+  owner: group:default/platform-team
+  type: cache
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-redis-replicas
+  title: "Redis replicas"
+  description: "Kubernetes StatefulSet redis/redis-replicas. Internal service; database and messaging protocol ports are not browser links."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: redis
+spec:
+  owner: group:default/platform-team
+  type: cache
+  system: system:default/k8s-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wscore-kubernetes
+  title: "wscore Kubernetes cluster"
+  description: "Kubernetes cluster including API server, control-plane etcd, scheduler, controller manager, kubelet and containerd. Single node observed on 2026-11-10."
+  tags: [kubernetes, homelab]
+  labels:
+    k8s-namespace: kube-system
+spec:
+  owner: group:default/platform-team
+  type: kubernetes-cluster
+  system: system:default/k8s-platform

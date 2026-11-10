@@ -5,7 +5,7 @@ kind: System
 metadata:
   name: k8s-platform
   title: "Kubernetes Platform"
-  description: "System grouping the workloads inventoried on wscore on 2026-11-10. Root URL is temporary; links do not imply endpoint health."
+  description: "System grouping the workloads inventoried on wscore on 2026-11-10. Root URL is temporary; links do not imply endpoint health. Links: Temporary system entry point: http://192.168.1.10/; Backstage: http://192.168.1.10:30007/; Rancher: http://192.168.1.10:30001/; Jenkins: http://192.168.1.10:30005/; Nexus: http://192.168.1.10:30003/; APISIX gateway: http://192.168.1.10:30990/; APISIX dashboard: http://192.168.1.10:30095/; Customer web: http://192.168.1.10:32767/; RabbitMQ management: http://192.168.1.10:30014/; Infrastructure documentation: https://github.com/hotienvu01/docs-hub"
   tags: [kubernetes, homelab]
   links:
     - url: "http://192.168.1.10/"
@@ -36,7 +36,7 @@ kind: Component
 metadata:
   name: apisix-apisix
   title: "APISIX gateway"
-  description: "Kubernetes workload apisix/apisix. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload apisix/apisix. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: APISIX gateway: http://192.168.1.10:30990/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: apisix
@@ -54,7 +54,7 @@ kind: Component
 metadata:
   name: apisix-apisix-dashboard
   title: "APISIX dashboard"
-  description: "Kubernetes workload apisix/apisix-dashboard. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload apisix/apisix-dashboard. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: APISIX dashboard: http://192.168.1.10:30095/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: apisix
@@ -72,7 +72,7 @@ kind: Component
 metadata:
   name: backstage-backstage
   title: "Backstage"
-  description: "Kubernetes workload backstage/backstage. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload backstage/backstage. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: Backstage: http://192.168.1.10:30007/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: backstage
@@ -165,7 +165,7 @@ kind: Component
 metadata:
   name: cattle-system-rancher
   title: "Rancher"
-  description: "Kubernetes workload cattle-system/rancher. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload cattle-system/rancher. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: Rancher: http://192.168.1.10:30001/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: cattle-system
@@ -243,7 +243,7 @@ kind: Component
 metadata:
   name: customer-service-kyosm-ec-web
   title: "Customer web"
-  description: "Kubernetes workload customer-service/kyosm-ec-web. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload customer-service/kyosm-ec-web. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: Customer web: http://192.168.1.10:32767/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: customer-service
@@ -261,7 +261,7 @@ kind: Component
 metadata:
   name: jenkins-jenkins
   title: "Jenkins"
-  description: "Kubernetes workload jenkins/jenkins. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload jenkins/jenkins. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: Jenkins: http://192.168.1.10:30005/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: jenkins
@@ -324,7 +324,7 @@ kind: Component
 metadata:
   name: nexus-nexus
   title: "Nexus Repository"
-  description: "Kubernetes workload nexus/nexus. Inventory does not certify health or ownership; platform-team is the provisional catalog owner."
+  description: "Kubernetes workload nexus/nexus. Inventory does not certify health or ownership; platform-team is the provisional catalog owner. Links: Nexus Repository: http://192.168.1.10:30003/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: nexus
@@ -456,7 +456,7 @@ kind: Resource
 metadata:
   name: message-quebe-rabbitmq
   title: "RabbitMQ"
-  description: "Kubernetes StatefulSet message-quebe/rabbitmq. Internal service; database and messaging protocol ports are not browser links."
+  description: "Kubernetes StatefulSet message-quebe/rabbitmq. Internal service; database and messaging protocol ports are not browser links. Links: RabbitMQ management: http://192.168.1.10:30014/"
   tags: [kubernetes, homelab]
   labels:
     k8s-namespace: message-quebe
